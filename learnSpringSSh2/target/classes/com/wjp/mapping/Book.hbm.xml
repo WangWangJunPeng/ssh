@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="com.wjp.pojo.Book" table="book">
+		<id name="id"> 
+			<generator class="native"></generator>
+			<!-- 自增长 -->
+		</id>
+		<property name="name"></property>
+		<property name="price"></property>
+	</class>
+	
+	<query name="findByName">
+		from Book where name = ?
+	</query>
+</hibernate-mapping> 
+    
+    

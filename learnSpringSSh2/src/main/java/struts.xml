@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">  
+  
+<struts>  
+	<!-- 配置constant会覆盖default.properties文件的配置 -->
+  	<!-- 默认编码是utf-8,下面这句话不加没关系 -->
+ <!--    <constant name="struts.i18n.reload" value="true" />   -->
+    <constant name="struts.devMode" value="true" />  
+	<!-- 开发者模式， -->
+  
+    <package name="default" extends="struts-default" namespace="/">
+    	<action name="book_*" class="bookAction" method="add">
+    		<!-- <result name="success">index.jsp</result> -->
+    	</action>
+    </package>
+
+</struts>  
